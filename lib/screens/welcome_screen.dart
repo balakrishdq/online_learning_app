@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -10,12 +11,19 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xffffccef),
-      body: Stack(
+    return ScaffoldGradientBackground(
+      gradient: LinearGradient(
+        colors: [
+          Color(0xffffb3e6),
+          Colors.white,
+        ],
+        begin: Alignment.bottomLeft,
+        end: Alignment.centerLeft,
+      ),
+      body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            height: 450,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.elliptical(200, 100),
@@ -34,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 400, left: 30, right: 30),
+            padding: const EdgeInsets.only(top: 40, left: 30, right: 30),
             child: Text(
               'Study any Topic,Anytime',
               style: TextStyle(
@@ -45,7 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 500, left: 30, right: 30),
+            padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
             child: Text(
               'Choose from 150,000 online video courses\nwith new additions published every\nmonth',
               style: TextStyle(
@@ -56,7 +64,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 620, left: 40, right: 30),
+            padding: const EdgeInsets.only(top: 62, left: 40, right: 30),
             child: ElevatedButton(
               onPressed: () {},
               child: Text(
