@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_learning_app/screens/signup_screen.dart';
 
 class WelcomeScreenFields extends StatelessWidget {
   const WelcomeScreenFields({super.key});
@@ -51,7 +52,9 @@ class WelcomeScreenFields extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 62, left: 40, right: 30),
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(SignupScreen.routeName);
+            },
             child: Text(
               'Start Learning',
               style: TextStyle(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:online_learning_app/screens/catagory_screen.dart';
 import 'package:online_learning_app/widgets/signup_screen/signup_form.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class SignupScreen extends StatefulWidget {
+  static const routeName = '/signup-screen';
   const SignupScreen({super.key});
 
   @override
@@ -54,7 +56,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 alignment: Alignment.bottomRight,
                 margin: EdgeInsets.only(right: 30),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(CatagoryScreen.routeName);
+                  },
                   child: Text(
                     'Signup',
                     style: TextStyle(

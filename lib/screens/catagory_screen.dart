@@ -4,6 +4,7 @@ import 'package:online_learning_app/widgets/category_screen/catagory_items.dart'
 import 'package:online_learning_app/widgets/category_screen/single_card.dart';
 
 class CatagoryScreen extends StatefulWidget {
+  static const routeName = '/category-screen';
   const CatagoryScreen({super.key});
 
   @override
