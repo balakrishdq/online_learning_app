@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_learning_app/screens/catagory_screen.dart';
+import 'package:online_learning_app/screens/course_list.dart';
 import 'package:online_learning_app/screens/signup_screen.dart';
 import 'package:online_learning_app/screens/welcome_screen.dart';
 
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
       // home: const CatagoryScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => WelcomeScreen(),
-        SignupScreen.routeName: (context) => SignupScreen(),
-        CatagoryScreen.routeName: (context) => CatagoryScreen(),
+        '/': (context) => CourseList(),
+        // SignupScreen.routeName: (context) => SignupScreen(),
+        // CatagoryScreen.routeName: (context) => CatagoryScreen(),
       },
     );
   }
