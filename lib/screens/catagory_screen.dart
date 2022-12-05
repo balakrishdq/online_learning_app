@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:online_learning_app/screens/course_list.dart';
 import 'package:online_learning_app/widgets/category_screen/catagory_items.dart';
 import 'package:online_learning_app/widgets/category_screen/search_bar.dart';
 import 'package:online_learning_app/widgets/category_screen/single_card.dart';
@@ -133,9 +134,14 @@ class _CatagoryScreenState extends State<CatagoryScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CategoryItems(
-                      categoryName: 'Design & IT',
-                      image: 'assets/images/category-image-1.jpeg',
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(CourseList.routeName);
+                      },
+                      child: CategoryItems(
+                        categoryName: 'Design & IT',
+                        image: 'assets/images/category-image-1.jpeg',
+                      ),
                     ),
                     CategoryItems(
                       categoryName: 'Beautician',

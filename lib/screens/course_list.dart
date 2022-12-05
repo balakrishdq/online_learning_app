@@ -6,6 +6,7 @@ import 'package:online_learning_app/widgets/course_list/category_logo.dart';
 import 'package:online_learning_app/widgets/course_list/instructor_card.dart';
 
 class CourseList extends StatefulWidget {
+  static const routeName = "/course-list";
   const CourseList({super.key});
 
   @override
@@ -19,8 +20,13 @@ class _CourseListState extends State<CourseList> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+          ),
           color: Colors.black,
         ),
         title: Padding(

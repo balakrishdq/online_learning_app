@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
       // home: const CatagoryScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => CourseList(),
-        // SignupScreen.routeName: (context) => SignupScreen(),
-        // CatagoryScreen.routeName: (context) => CatagoryScreen(),
+        '/': (context) => WelcomeScreen(),
+        SignupScreen.routeName: (context) => SignupScreen(),
+        CatagoryScreen.routeName: (context) => CatagoryScreen(),
+        CourseList.routeName: (context) => CourseList(),
       },
     );
   }
