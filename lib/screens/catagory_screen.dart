@@ -103,7 +103,7 @@ class _CatagoryScreenState extends State<CatagoryScreen> {
                       ),
                       Positioned(
                         top: 155,
-                        left: 22,
+                        left: 24,
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
                           maxRadius: 18,

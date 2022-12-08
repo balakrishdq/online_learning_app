@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:online_learning_app/screens/catagory_screen.dart';
+import 'package:online_learning_app/screens/course_details.dart';
 import 'package:online_learning_app/screens/course_list.dart';
 import 'package:online_learning_app/screens/signup_screen.dart';
+import 'package:online_learning_app/screens/video_call_screen.dart';
 import 'package:online_learning_app/screens/welcome_screen.dart';
 
 void main() {
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
         SignupScreen.routeName: (context) => SignupScreen(),
         CatagoryScreen.routeName: (context) => CatagoryScreen(),
         CourseList.routeName: (context) => CourseList(),
+        CourseDetails.routeName: (context) => CourseDetails(),
+        VideoCallScreen.routeName: (context) => VideoCallScreen(),
       },
     );
   }
