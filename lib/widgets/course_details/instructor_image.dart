@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gap/gap.dart';
+import 'package:online_learning_app/screens/video_call_screen.dart';
 
 class InstructorImage extends StatelessWidget {
   const InstructorImage({super.key});
@@ -52,9 +53,14 @@ class InstructorImage extends StatelessWidget {
           ),
           child: CircleAvatar(
             backgroundColor: Colors.white,
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.black,
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(VideoCallScreen.routeName);
+              },
+              child: Icon(
+                Icons.play_arrow,
+                color: Colors.black,
+              ),
             ),
           ),
         ),

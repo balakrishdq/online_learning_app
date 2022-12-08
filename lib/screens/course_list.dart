@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:online_learning_app/screens/course_details.dart';
 import 'package:online_learning_app/widgets/category_screen/search_bar.dart';
 import 'package:online_learning_app/widgets/category_screen/single_card.dart';
 import 'package:online_learning_app/widgets/course_list/category_logo.dart';
@@ -158,17 +159,22 @@ class _CourseListState extends State<CourseList> {
                 ),
               ),
               Gap(15),
-              SingleCard(
-                image: 'assets/images/card-image-4.jpg',
-                title: 'Photoshop CC 2020',
-                description: 'It is long established..',
-                categoryName: 'Design',
-                ratingValue: '4.5',
-                ratingStarCount: 4.5,
-                ratingCount: '8786',
-                duration: '12 Hours',
-                lectureCount: '12',
-                level: 'Intermediate',
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(CourseDetails.routeName);
+                },
+                child: SingleCard(
+                  image: 'assets/images/card-image-4.jpg',
+                  title: 'Photoshop CC 2020',
+                  description: 'It is long established..',
+                  categoryName: 'Design',
+                  ratingValue: '4.5',
+                  ratingStarCount: 4.5,
+                  ratingCount: '8786',
+                  duration: '12 Hours',
+                  lectureCount: '12',
+                  level: 'Intermediate',
+                ),
               ),
               Gap(10),
               SingleCard(

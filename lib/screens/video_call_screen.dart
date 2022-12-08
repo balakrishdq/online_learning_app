@@ -67,7 +67,7 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 50),
+              padding: const EdgeInsets.only(bottom: 50, left: 10),
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(

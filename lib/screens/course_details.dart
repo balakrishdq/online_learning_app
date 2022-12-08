@@ -28,21 +28,25 @@ class _CourseDetailsState extends State<CourseDetails> {
         end: Alignment.bottomRight,
       ),
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        actions: [
-          Icon(
-            Icons.more_vert,
-            color: Colors.black,
-            size: 22,
-          ),
-        ],
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
-          size: 22,
-        ),
-      ),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+          actions: [
+            Icon(
+              Icons.more_vert,
+              color: Colors.black,
+              size: 22,
+            ),
+          ],
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+              size: 22,
+            ),
+          )),
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(
